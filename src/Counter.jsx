@@ -5,18 +5,13 @@ const Counter = () => {
 
     return (
         <div>
-            <span data-testid="counter-value">Counter: {count}</span> {/* Ensures text is in a `span` */}
+            <span>Counter: {count}</span> 
             <br/>
-            <button 
-                data-testid="increment-button" 
-                onClick={() => setCount(prevCount => prevCount + 1)} // Use `prevCount` for robustness
-            >
+            <button type="button"onClick={() => setCount(prevCount => prevCount + 1)}>
                 Increment
             </button>
-            <button 
-                data-testid="decrement-button" 
-                onClick={() => setCount(prevCount => prevCount - 1)} // Use `prevCount` for robustness
-            >
+            <button  type="button"
+                onClick={() => setCount(prevCount => prevCount - 1)}>
                 Decrement
             </button>
         </div>
