@@ -1,20 +1,20 @@
 import { useState } from 'react';
 
 const Counter = () => {
-    const [count, setCount] = useState(0); // Single state for counter
+    const [count, setCount] = useState(0);
 
     return (
         <div>
-            <h1 data-testid="counter-value">Counter: {count}</h1> {/* Explicit text for testing */}
+            <span data-testid="counter-value">Counter: {count}</span> {/* Ensures text is in a `span` */}
             <button 
                 data-testid="increment-button" 
-                onClick={() => setCount(count + 1)}
+                onClick={() => setCount(prevCount => prevCount + 1)} // Use `prevCount` for robustness
             >
                 Increment
             </button>
             <button 
                 data-testid="decrement-button" 
-                onClick={() => setCount(count - 1)}
+                onClick={() => setCount(prevCount => prevCount - 1)} // Use `prevCount` for robustness
             >
                 Decrement
             </button>
