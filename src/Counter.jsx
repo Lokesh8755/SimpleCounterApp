@@ -5,15 +5,10 @@ const Counter = () => {
 
     return (
         <div>
-            <span>Counter: {count}</span> 
+            <span data-testid="counter-value">Count: {count}</span>
             <br/>
-            <button type="button"onClick={() => setCount(prevCount => prevCount + 1)}>
-                Increment
-            </button>
-            <button  type="button"
-                onClick={() => setCount(prevCount => prevCount - 1)}>
-                Decrement
-            </button>
+            <button type="button" onClick={() => setCount(prevCount => prevCount + 1)}>Increment</button>
+            <button  type="button" onClick={() => setCount(prevCount => prevCount - 1)}>Decrement</button>
         </div>
     );
 };
