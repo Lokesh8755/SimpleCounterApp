@@ -6,6 +6,7 @@ const Counter = () => {
     return (
         <div>
             <span data-testid="counter-value">Counter: {count}</span> {/* Ensures text is in a `span` */}
+            <br/>
             <button 
                 data-testid="increment-button" 
                 onClick={() => setCount(prevCount => prevCount + 1)} // Use `prevCount` for robustness
